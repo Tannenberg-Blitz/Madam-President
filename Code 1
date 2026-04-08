@@ -1,0 +1,946 @@
+if(!campaignTrail_temp.loaded1){
+
+  campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 20,
+        "fields": {
+            "year": 2016,
+            "display_year": "Madam President",
+            "summary": "Wisconsin. Two thousand one hundred thirty-two votes. That was what saved the American experiment from a goose-stepping lunatic.<br><br>But when the dust had settled, the scars of that election never truly healed. Deep down, everyone enjoyed the carnage, the short-lived dopamine rush that came from embracing their lowest instincts. And they want more. <br><br>For all her faults, <span class='she'>SHE</span> is the only thing that stands between the barbaric bigotry of the right-wing and the dogmatic lunacy of the left-wing. With <span class='she'>HER</span>extremely weak mandate, <span class='she'>SHE</span> is up to the Sisyphean task of protecting a country that already rejected <span class='she'>HER</span> in their hearts.<br><br>What would <span class='she'>HER</span> legacy be if they were allowed to succeed? A mere stopping stone for someone worse? A cautionary tale for someone better?<br><br>No, that won't happen. That's not what SHE would have wanted<br><br>With <span class='glitter-text'>MADAM PRESIDENT</span> at the helm…their victory is all but guaranteed.",
+            "image_url": "https://file.garden/aPBWYPjiFyWz_Xv2/Madam%20President%20Intro.gif",
+            "winning_electoral_vote_number": 270,
+            "advisor_url": "https://i.ibb.co/bFGvQ8j/ffffg.png",
+            "recommended_reading": ``,
+            "has_visits": 0,
+            "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
+        }
+    }
+]
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 20,
+        "year": 2016,
+        "is_premium": 0,
+        "display_year": "Madam President"
+    }
+]
+
+
+
+e=campaignTrail_temp
+
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 35,
+            "default_map_color_hex": "aliceblue",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
+e.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 131,
+        "fields": {
+            "first_name": "Hillary",
+            "last_name": "Clinton",
+            "election": 20,
+            "party": "Democratic", 
+            "state": "New York",
+            "priority": 1,
+            "description": "<h2 style='text-decoration: underline solid #8B0000 4px; color: #90D5FF; font-family: Times New Roman; font-style: italic; font-size: 30px; margin: 6px 0 20px 0;'><b>Hillary Clinton</b></h2><div style='font-size: 14px; max-height: 250px; overflow-y: auto;'><b><span style='margin: 6px 0 20px 0;'>More than 45,000 Americans die annually due to a lack of health insurance.</span></b><br><br>When did it start? When did people begin foaming at the mere mention of your name? When did you become a rug for people to scrub their dirty feet on instead of someone with thoughts and feelings?<br><br><i>You're really stupid if you think a girl can be elected president.'<br><br></i>It was probably here, a lost election for high-school president. Teenagers can be pretty cruel, especially males. For the last fifty years, your political career has been hearing some variant of these words, over and over.<br><br>You heard them when your healthcare plan was killed. You heard them when the media nailed you to the wall for a mistake your husband made. You heard them when a charismatic freshman beat you because of a war you didn't start. You heard them when people accused you of killing people you didn't even know. You heard them when a Socialist seatwarmer and a former friend turned Manchurian candidate made your life impossible over things you don't believe in.<br><br>And yet…you are still there, standing in the White House. Ready to work, ready to deliver. At your feet, a nation with millions of those high-school bullies, waiting to sink their teeth into you again. You won't give them the satisfaction. There are many beautiful things in life worth fighting for.<br><br>Besides, they can't keep doing this forever, right?</div>",
+            "color_hex": "#698ac0",
+            "secondary_color_hex": '#1d36b5',
+            "is_active": 1,
+            "image_url": "https://file.garden/aPBWYPjiFyWz_Xv2/Hillary%20portait.jpg",
+            "electoral_loss_message": "Lose",
+            "no_electoral_majority_message": "Tie",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 132,
+        "fields": {
+            "first_name": "The",
+            "last_name": "Deplorables",
+            "election": 20,
+            "party": "The Republic",
+            "state": "New York",
+            "priority": 1,
+            "description": "Description",
+            "color_hex": "#ea7363",
+            "secondary_color_hex": '#b51d1d',
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/LHGLkG9.png",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 137,
+        "fields": {
+            "first_name": "Tim",
+            "last_name": "Kaine",
+            "election": 20,
+            "party": "The Democracy",
+            "state": "Virginia",
+            "priority": 1,
+            "description": "<p></p>",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://file.garden/aPBWYPjiFyWz_Xv2/campaign_2016_kaine-jpeg-57fa3.jpg",
+            "electoral_victory_message": "This guy wins!",
+            "electoral_loss_message": "This guy loses!",
+            "no_electoral_majority_message": "We all win?",
+            "description_as_running_mate": "<h2 style='text-decoration: underline solid #8B0000 4px; color: #90D5FF; font-family: Times New Roman; font-style: italic; font-size: 30px; margin: 6px 0 20px 0;'>Tim Kaine</h2><div style='max-height: 250px; font-size: 14px; overflow-y:auto'><b><span style='margin: 6px 0 20px 0;'>More than 19,000,000 American women lack access to reproductive healthcare.</span></b><br><br>Few words could describe Timothy Michael Kaine better than boring. He is unremarkable, a nobody, someone people forget is the vice-president. He is no Lyndon, nor Cheney. He is just Tim, yet he is also so much more.<br><br>Tim is the vice-president, the second-in-line to the throne if Hillary is to fall, yet he doesn't seem to think about that possibility. He is always bogged down in the Senate, making deals, alliances, finding a way to push the legislation forward, to compromise, never to be radical, never to be a Sanders. He might appear at some presidential balls, but he knows where he belongs.<br><br>He is a wild card, without being wild, able to transform his ideology into anything Clinton needs at that moment. He can be a progressive, a dove, a hawk, and a blue dog; he can be anything, he just needs a little push from the Oval to make it happen. Although some nights, when he is alone in the Naval Observatory, he looks upon the sky, wondering if this really is his destiny.<br><br></div>",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+      "model": "campaign_trail.candidate",
+      "pk": 138,
+      "fields": {
+          "first_name": "Republican",
+          "last_name": "Committee",
+          "election": 20,
+          "party": "The Republic", 
+          "state": "Virginia",
+          "priority": 1,
+          "description": "Windows.",
+          "color_hex": "#c40000",
+          "secondary_color_hex": null,
+          "is_active": 0,
+          "image_url": "https://i.imgur.com/SOnaMyB.png",
+          "electoral_victory_message": "This guy wins!",
+          "electoral_loss_message": "This guy loses!",
+          "no_electoral_majority_message": "We all win?",
+          "description_as_running_mate": "description",
+          "candidate_score": 1,
+          "running_mate": true
+        }
+    },
+    {
+      "model": "campaign_trail.candidate",
+      "pk": 133,
+      "fields": {
+          "first_name": "Left",
+          "last_name": "Left",
+          "election": 20,
+          "party": ".",
+          "state": ".",
+          "priority": 1,
+          "description": ".",
+          "color_hex": "#8f0606",
+          "secondary_color_hex": 'rgb(19, 117, 18)',
+          "is_active": 0,
+          "image_url": "https://i.imgur.com/LHGLkG9.png",
+          "electoral_victory_message": ".",
+          "electoral_loss_message": ".",
+          "no_electoral_majority_message": ".",
+          "description_as_running_mate": null,
+          "candidate_score": 0,
+          "running_mate": false
+        }
+    },
+    {
+      "model": "campaign_trail.candidate",
+      "pk": 134,
+      "fields": {
+          "first_name": "Right/Schizo",
+          "last_name": "Right/Schizo",
+          "election": 20,
+          "party": ".",
+          "state": ".",
+          "priority": 1,
+          "description": ".",
+          "color_hex": "rgb(213, 178, 21)",
+          "secondary_color_hex": null,
+          "is_active": 0,
+          "image_url": ".",
+          "electoral_victory_message": ".",
+          "electoral_loss_message": ".",
+          "no_electoral_majority_message": ".",
+          "description_as_running_mate": ".",
+          "candidate_score": 0,
+          "running_mate": false
+        }
+    },
+    {
+      "model": "campaign_trail.candidate",
+      "pk": 139,
+      "fields": {
+          "first_name": "Opposition",
+          "last_name": "Opposition",
+          "election": 20,
+          "party": ".",
+          "state": ".",
+          "priority": 1,
+          "description": ".",
+          "color_hex": "rgb(213, 178, 21)",
+          "secondary_color_hex": null,
+          "is_active": 0,
+          "image_url": ".",
+          "electoral_victory_message": ".",
+          "electoral_loss_message": ".",
+          "no_electoral_majority_message": ".",
+          "description_as_running_mate": ".",
+          "candidate_score": 0,
+          "running_mate": true
+        }
+    },
+    {
+      "model": "campaign_trail.candidate",
+      "pk": 140,
+      "fields": {
+          "first_name": "Opposition",
+          "last_name": "Opposition",
+          "election": 20,
+          "party": ".",
+          "state": ".",
+          "priority": 1,
+          "description": ".",
+          "color_hex": "rgb(213, 178, 21)",
+          "secondary_color_hex": null,
+          "is_active": 0,
+          "image_url": ".",
+          "electoral_victory_message": ".",
+          "electoral_loss_message": ".",
+          "no_electoral_majority_message": ".",
+          "description_as_running_mate": ".",
+          "candidate_score": 0,
+          "running_mate": true
+        }
+    }
+]
+
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 1,
+        "fields": {
+            "candidate": 131,
+            "running_mate": 137
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 2,
+        "fields": {
+            "candidate": 132,
+            "running_mate": 138
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 3,
+        "fields": {
+            "candidate": 133,
+            "running_mate": 139
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 2,
+        "fields": {
+            "candidate": 134,
+            "running_mate": 140
+        }
+    }
+]
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 20,
+        "candidates": [
+            131,
+            132,
+            133,
+            134
+        ]
+    }
+]
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 20,
+        "candidates": [
+            131,
+            132,
+            133,
+            134
+        ]
+    }
+]
+
+$("#music_player").children().slice(0, 2).hide();
+$("#modLoadReveal, #modloaddiv").hide();
+function hiderr() {
+    $(".game_header").hide(); // This line hides the game header
+
+    // Request the next frame
+    requestAnimationFrame(hiderr);
+}
+
+// Start the constant hiding process
+requestAnimationFrame(hiderr);
+
+function updateGameHeaderContentAndStyling() {
+    // Intentionally left blank to disable the function
+}
+updateGameHeaderContentAndStyling();
+// Function to create and prepend the new header
+function reallyUpdate() {
+    // Remove the existing header if it exists
+    $("#game_header22").remove();
+
+    const newHeader = $("<div>", {
+        id: "game_header22",
+        style: "background-color: #2354b5;",
+        html: `<img src="https://i.imgur.com/QD8xsKr.png" alt="MADAM PRESIDENT" style="width: 960px;background-color: #2354b5; line-height: normal;">`
+    });
+
+    $("#game_window").prepend(newHeader); // Add the new header at the top of the game_window
+}
+
+// Set up the event listener for button clicks
+$(document).on("click", "button", function() {
+    reallyUpdate(); // Call the update function each time a button is clicked
+});
+
+document.querySelectorAll('h4').forEach(h4 => h4.style.textIndent = '-9999px');
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "rgb(23, 52, 94)";
+
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+$(".container")[0].style.backgroundColor = "#960000";
+$("#inner_window_1 h3").css("text-align", "center").text("Are you ready to bridge the path forward for America?");
+
+document.getElementById("inner_window_1").children[0].innerHTML= `<div style="color: white; font-family: 'SharpUnityBold'; text-align: center; font-size: 24px;">Dear Hillary:</div>`
+document.getElementById("inner_window_1").style = "background-color: white; color: black; text-align: center; ';"
+document.getElementById("inner_window_1").children[1].style.marginLeft = "-30px";
+document.getElementById("inner_window_1").children[1].innerHTML = `<div style="color: red; font-family: 'SharpUnityBold'; font-size: 24px;"><img src="https://i.imgur.com/DjMzLo2.gif" width="250" height="auto" alt="for dorothy"><p>It's been a while.<p>How are you doing?Are you eating right? Are you sleeping well? How is Betsy doing?</p><p>You look sad, honey. What's wrong? You always wanted to be there. You were so excited about it last time.<p> Is someone giving you trouble? Is Bill back to his old habits? Are those two cranks again?</p><p><span class="them">Them? They</span>keep going after you, even after you beat <span class="them">them?</span><p>Don't give up, sweetheart. You worked so hard for this; you earned it. You are Hillary Rodham Clinton, President of the United States.<span class="them">They</span> are nothing compared to you. You can't let them win.</p></div>`;
+document.getElementById('game_start').innerHTML = 'KEEP GOING';
+document.getElementById("header").src = "https://i.imgur.com/ume3PQ0.jpeg";
+document.querySelector('.campaign_trail_start_emphasis').style.backgroundColor = 'white';
+document.body.background = "https://i.imgur.com/IPdSFlu.png";
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color: #17345e !important;}</style>";        
+
+window.ondragstart = function() { return false; } 
+
+const startScreenUpdater = setInterval(function() {
+
+        const candSummary = document.getElementById("candidate_summary");
+        const runSummary = document.getElementById("running_mate_summary")
+        const prologue = document.getElementById("inner_window_1");
+        const electionHeader = document.querySelector('form[name="election_year"] h3');
+        const candHeader = document.querySelector('form[name="candidate"] h3');
+        const runHeader = document.querySelector('form[name="running mate"] h3')
+
+        if (prologue && !prologue.dataset.modified) {
+            prologue.children[0].innerHTML = `<div style="color: black; font-family: 'SharpUnityBold'; text-align: center; font-size: 24px;">Dear Hillary:</div>`;
+            prologue.style = "background-color: white; color: black; text-align: center; height: auto";
+            prologue.children[1].innerHTML = `<img src="https://file.garden/aPBWYPjiFyWz_Xv2/Madam%20President%20Prologue%20Image.gif" style="width: 280px; height: auto; border: 3px solid black; margin-top: 10px; margin-bottom: 20px;" alt="for dorothy"><p style="color: black; font-family: 'SharpUnityBold'; font-size: 14px;">It's been a while.<br><br>How are you doing? Are you eating right? Are you sleeping well? How is Betsy doing?<br><br>You look sad, honey. What's wrong? You always wanted to be there. You were so excited about it last time.<br><br>Is someone giving you trouble? Is Bill back to his old habits? Are those two cranks again?<br><br><span class="them">Them? They</span> keep going after you, even after you beat <span class="them">them?</span><br><br>Don't give up, sweetheart. You earned this. Don't let  <span class="them">  them</span>take it way from you.<br><br>Destroy <span class="them">them.</span> Fulfill your destiny.</p>`;
+            prologue.dataset.modified = "true";    
+        }
+        
+        if (candSummary && !candSummary.dataset.modified) {
+            candSummary.style = "background-color: white; color: black;"
+	          candSummary.innerHTML = `
+            <p style='text-decoration: underline solid #8B0000 4px; color: #2354b5; font-family: Times New Roman; font-style:italic; font-size: 30px; margin: 6px 0 20px 0;'><b>Hillary Clinton - New York</b></p>
+            <div style='max-height: 250px; font-size: 14px; overflow-y: auto;'><b><span style='margin: 6px 0 20px 0; font-size:16px;'>More than 45,000 Americans die annually due to a lack of health insurance.</span></b>
+                    <br><br>When did it start? When did people begin foaming at the mere mention of your name? When did you become a rug for people to scrub their dirty feet on instead of someone with thoughts and feelings?<br><br><span class="them" style="margin-left: 10px;">"You're really stupid if you think a girl can be elected president."<br><br></span><br><br>It was probably here, a lost election for high-school president. Teenagers can be pretty cruel, especially males. For the last fifty years, your political career has been hearing some variant of these words, over and over.<br><br>You heard them when your healthcare plan was killed. You heard them when the media nailed you to the wall for a mistake your husband made. You heard them when a charismatic freshman beat you because of a war you didn't start. You heard them when people accused you of killing people you didn't even know. You heard them when a Socialist seatwarmer and a former friend turned Manchurian candidate made your life impossible over things you don't believe in.<br><br>And yet…you are still there, standing in the White House. Ready to work, ready to deliver. At your feet, a nation with millions of those high-school bullies, waiting to sink their teeth into you again. You won't give them the satisfaction. There are many beautiful things in life worth fighting for.<br><br>Besides, they can't keep doing this forever, right?</div>`
+            candSummary.dataset.modified = "true";       
+	      }
+
+        if (runSummary && !runSummary.dataset.modified) {
+            runSummary.style = "background-color: white; color: black;"
+	          runSummary.innerHTML = `
+            <p style='text-decoration: underline solid #8B0000 4px; color: #2354b5; font-family: Times New Roman; font-style: italic; font-size: 30px; margin: 6px 0 20px 0;'><b>Tim Kaine - Virginia </b></p>
+            <div style='max-height: 250px; font-size: 14px; overflow-y: auto;'><b><span style='margin: 6px 0 20px 0; font-size:16px;'>More than 19,000,000 American women lack access to reproductive healthcare.</span></b>
+                    <br><br>Few words could describe Tim Kaine better than boring. He is unremarkable, a nobody, someone people forget is the vice-president. He is no Lyndon, nor Cheney. He is just Tim, yet he is also so much more.<br><br>Tim is the vice-president, the second-in-line to the throne if Hillary is to fall, yet he doesn't seem to think about that possibility. He is always bogged down in the Senate, making deals, alliances, finding a way to push the legislation forward, to compromise, never to be radical, never to be a Sanders. He might appear at some presidential balls, but he knows where he belongs.<br><br>He is a wild card, without being wild, able to transform his ideology into anything Clinton needs at that moment. He can be a progressive, a dove, a hawk, and a blue dog; he can be anything, he just needs a little push from the Oval to make it happen. Although some nights, when he is alone in the Naval Observatory, he looks upon the sky, wondering if this really is his destiny.<br><br></div>`
+            runSummary.dataset.modified = "true";
+	      }
+
+        if (electionHeader && !electionHeader.dataset.modified) {
+          electionHeader.innerHTML = `<div style="color: white; font-family: 'SharpUnityBold';">Prove them wrong:</div>`;
+          electionHeader.dataset.modified = "true";
+        }
+
+        if (candHeader && !candHeader.dataset.modified) {
+          candHeader.innerHTML = `<div style="color: white; font-family: 'SharpUnityBold';">Select your daughter:</div>`;
+          candHeader.dataset.modified = "true";
+        }
+
+        if (runHeader && !runHeader.dataset.modified) {
+          runHeader.innerHTML = `<div style="color: white; font-family: 'SharpUnityBold';">Select your load:</div>`;
+          runHeader.dataset.modified = "true";
+        }
+
+        if (prologue?.dataset.modified && candSummary?.dataset.modified && runSummary?.dataset.modified && relectionHeader?.dataset.modified && candHeader?.dataset.modified && runHeader?.dataset.modified) {
+          clearInterval(startScreenUpdater);
+        }  
+}, 1)
+
+// Creates Hover effect
+
+const hoverEffect = setInterval(function() {
+    const portraitImages = document.querySelectorAll(".person_image img");
+
+    portraitImages.forEach(img => {
+        
+        if (img.dataset.hoverActive) return;
+
+        const currentSrc = img.src;
+        let hoverSrc = "";
+
+        if (currentSrc.includes("Hillary%20portait.jpg")) {
+            hoverSrc = "https://file.garden/aPBWYPjiFyWz_Xv2/Clinton%202.png";
+        } else if (currentSrc.includes("https://file.garden/aPBWYPjiFyWz_Xv2/campaign_2016_kaine-jpeg-57fa3.jpg")) { 
+            hoverSrc = "https://file.garden/aPBWYPjiFyWz_Xv2/kaine%202.webp";
+        }
+
+        
+        if (hoverSrc) {
+            img.style.transition = "opacity 0.4s ease-in-out";
+            
+            img.addEventListener("mouseenter", function() {
+                this.style.opacity = "0";
+                setTimeout(() => {
+                    this.src = hoverSrc;
+                    this.style.opacity = "1";
+                }, 200);
+            });
+
+            img.addEventListener("mouseleave", function() {
+                this.style.opacity = "0";
+                setTimeout(() => {
+                    this.src = currentSrc;
+                    this.style.opacity = "1";
+                }, 200);
+            });
+
+            img.dataset.hoverActive = "true";
+        }
+    });
+}, 1);
+
+
+// Set ups observer
+
+let observerRunning = false;
+var masterObserver = new MutationObserver(handleMutations);
+
+function handleMutations(mutationsList, observer) {
+    if (observerRunning) return;
+    observerRunning = true;
+    startScreenUpdater();
+    hoverEffect();
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    observerRunning = false;
+}
+
+masterObserver.observe(document.documentElement, { 
+    childList: true, 
+    subtree: true 
+});
+
+
+window.ondragstart = function() { return false; } 
+
+const morgan = document.createElement('style');
+
+
+// Add the CSS rule to the style element
+morgan.textContent = `
+
+.them {
+    display: inline-block;
+    font-weight: bold;
+    color: #FFFFFF; /* Keeps the text legible against the dark smoke */
+    filter: blur(0.2px); /* Slight blur on the text itself for a softer look */
+    animation: dark-smoke 5s ease-in-out infinite;
+}
+
+@keyframes dark-smoke {
+  0%, 100% {
+    text-shadow: 
+        0 0 5px #000000,
+        0 0 10px #000000,
+        0 0 15px #000000, 
+        0 0 30px #000000, 
+        0 0 50px rgba(0, 0, 0, 1);    
+    transform: scale(1);
+  }
+}
+
+@keyframes dark-smoke {
+  50% {
+    text-shadow: 
+        0 0 5px #000000,
+        0 0 10px #000000,
+        0 0 15px #000000, 
+        0 0 30px #000000, 
+        0 0 50px rgba(0, 0, 0, 1);   
+    transform: scale(1);
+  }
+}
+
+/* Killary */
+
+.she {
+  color: #f9d7dd;
+}
+
+/* Custom Intro Glitter Thing */
+
+  @import url('https://fonts.googleapis.com/css?family=Emblema One');
+
+  @font-face {
+  font-family: 'Sharp Sans';
+  src: url('path/to/your/sharpsans-webfont.woff2') format('woff2'),
+       url('path/to/your/sharpsans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+ .glitter-text {
+	font-family: 'Sharp Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;	
+	background-image: url(https://i.pinimg.com/originals/69/e5/27/69e527204a72e13a87357ce653a4c5e3.gif);
+	background-size: 400px;
+	background-attachment: unset;
+	background-position: 0%;
+	animation: glitter-moving 10s linear infinite;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	animation-timing-function: linear;
+  }
+
+  @keyframes glitter-moving {
+	0% {
+		background-position: 0%;	
+	  }
+	50% {
+		background-position: 100%;	
+	  }
+	100% {
+		background-position: 0%;
+	  }
+  }
+
+  
+
+  input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: 4px solid rgb(255, 255, 255);
+    transition: 0.5s all cubic-bezier(0.4, 0, 1, 1);
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+  input[type="radio"]:checked {
+    border: 5px solid rgb(150, 0, 0);
+  }
+
+  .person_summary ul {
+    display: none !important;
+  }
+  
+  .person_description_window {
+    color: aliceblue;
+    background-color: #012257;
+    overflow-y: hidden !important;
+  }
+
+  .person_image {
+    height:256px;
+  }
+
+  #candidate_form h3 {
+    color: #d8dde6;
+  }
+  #election_year_form h3 {
+    color: #d8dde6;
+  }
+  #running_mate_form h3 {
+    color: #d8dde6;
+  }
+  #game_options h3 {
+    color: #d8dde6;
+  }
+  #difficulty_level h3 {
+    color: #d8dde6;
+  }
+
+  .overlay_window p {
+    margin-top: 10px;
+  }
+    #running_mate_description_window { color: aliceblue; background-color: #012257 }
+    #election_description_window { background-color: black; width: auto; height:324px;}
+    #opponent_selection_description_window { color: aliceblue; background-color: #012257 }
+    #election_summary {  
+          color: white; font-size: 14px; text-align: right; z-index: 0; width:auto; height:324px;}
+    #election_summary p {
+          font-size: 13px;
+          width: 645px;
+          margin-left: -400px;
+          height: 324px;
+        }
+    #election_image {
+          margin-left: 0px;
+          margin-top: 0px;
+          width:390px;
+          height: 318px;
+          background-image: 
+            linear-gradient(to right, transparent 85%, rgba(0, 0, 0, 1)), 
+            url('https://file.garden/aPBWYPjiFyWz_Xv2/Madam%20President%20Intro.gif'); 
+          background-size: cover; 
+          z-index: 1;
+        }
+    #election_image img{
+          padding: 1px 1px; 
+          border: 1px solid #C9C9C9;
+          z-index: 0;
+          opacity: 0;
+        }
+    #election_summary p {
+          color: white;
+          font-size: 14px;
+          width: 645px;
+          margin-left: -400px;
+        }
+    #election_id_button {background: #D6342F; position: relative;}
+    #credits { position: relative; }
+    #site_credits {color: white; }
+    .inner_window_question h3 {margin: 6px 1em .5em;border: double;border-color: aliceblue;background-color: #FFFFFF}
+    .inner_window_question {margin: 6px 1em .5em;border: double;border-color: aliceblue;background-color: #FFFFFF; height: 300px}
+    #progress_bar { color: aliceblue; background-color: #111d2b }
+    #map_footer i { color:aliceblue;}
+    #final_results_description {color:aliceblue; overflow-y:scroll; height: 300px;}
+    p {font-size: 97%; font-family:helvetica; margin:0px; margin-bottom: 30px; color:aliceblue;background-color: transparent !important;}
+    #trackSel label { color: aliceblue ;background-color: #223b61;}
+    #trackSel { background-color: #223b61;}
+    #menu_container { background-color: #223b61;}
+    .inner_window_sign_display { background-color: #111d2b; border-radius: 8px;}
+    #game_window { height: 650px;}
+    #open_custom_theme, #achButton, #mobileModeButton, #cheat_menu_button, #customThemesButton, [onclick^="activateBenefitCheck()"], [onclick^="activateCheatMenu()"] {background-color: white; color: #2354b5}
+    
+
+    #below_header { height: auto; }
+    #campaign_sign { width: 240px ;background-position: center;margin-top: -20px; text-indent: -9999px; color: #0077c5; background-repeat: no-repeat; background-image: url("https://i.imgur.com/KYCFiWe.png"); background-size: 240px; height: 100px; color: aliceblue; border-color: #1c244a; }
+    .visit_text {font-weight: 700; font-size: 1.1em; text-indent: -9999999px;}
+    #relations_view div:nth-of-type(1) button, #confirm_visit_button, #no_visit_button, #final_results_description, #ok_button, #no_feedback_button, #sort_tab, #state_tab, #ExportFileButton, #feedback_window, #feedback_window h3, #nextyButton, #backyButton, #visit_content h3, #final_result_button, #overlay_result_button, #state_result, #state_result h3, #state_result p, #trackSel label, #trackSel, #selectSoundtrack, #map_container, #menu_container, #new_game_window h3, #new_game_window, #new_game_button, #cancel_button, #goBackButton, #administration_button, #overall_result, #overall_result_container, #overall_result h3, #state_info, #state_info h3, #state_info p, #state_info ul, #pvswitcher, #ev_est, #resume_questions_button, #margin_switcher, #AdvisorButton, #game_start, #election_id_button, #candidate_id_button, #candidate_id_back, #running_mate_id_back, #running_mate_id_button, #opponent_selection_id_button, #opponent_selection_id_back, #answer_select_button, #view_electoral_map, #visit_window, #election_night_window, #election_night_window h3, .final_menu_button {color: white; background-color: #D6342F;}
+    #game_header22 h2 {font-family: 'SharpUnity'; background-color: '#FFFFFF'; line-height: normal; font-style: normal}
+    img {border-radius: 10px;}
+    #map_container {background-color: #182b4d;
+    }
+
+    .candidate-image {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(20%);
+  }
+
+  .candidate-image:hover {
+    filter: grayscale(0%) brightness(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(144, 213, 255, 0.6);
+  }
+
+
+  @font-face {
+    font-family: "SharpUnityBold";
+    src: url("https://file.garden/Z0FdkcTkDnGVVCGf/SharpUnity-Extrabold%20(4).ttf") format("truetype"),
+         local("Times New Roman");
+}
+
+  p.customfont { 
+    font-family: "SharpUnityBold";
+  }
+
+  span.customfont { 
+    font-family: "SharpUnityBold";
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #2e2e2e;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Banner graphic from Obama’s second term */
+  header {
+    background: url('https://i.imgur.com/your-second-term-banner.jpg') center/cover no-repeat;
+    height: 240px;
+    position: relative;
+  }
+
+  .tooltip {
+          position: absolute; 
+          visibility: hidden; 
+          opacity: 0;
+          transition: opacity 0.3s ease, visibility 0s 0.3s; 
+          background-color: #333;
+          color: #fff;
+          padding: 8px;
+          border-radius: 6px;
+          max-width: 200px; 
+          text-align: center; 
+          left: 61%; 
+          top: 4%; 
+          transform: translate(-50px, 0px); 
+  }
+
+  .tooltip-container:hover .tooltip {
+      pointer-events: auto; 
+      transition-delay: 0s; 
+      background-color: #201F1A;
+      background-Image: url("https://files.catbox.moe/4ei9g3.png");
+      background-size: cover; 
+      font-family: Arial, sans-serif !important;
+      font-style: normal !important;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left; 
+      line-height: 1.2; 
+  }
+
+  .tooltip img {
+      display: block; 
+      margin: 0 auto -13px;
+      max-width: 50%; 
+      // border: 1px solid #C9C9C9;
+  }
+
+   .tooltip-container {
+   opacity: 1;
+   transition-delay: 0.5s;
+   border-bottom: 1px dotted blue; 
+  }
+ 
+
+
+  header h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  }
+
+  /* Faux Tabs */
+  .tabs {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+  .tab {
+    flex: 1;
+    padding: 12px 20px;
+    text-align: center;
+    background: #e1ecf4;
+    color: #205493;
+    font-weight: 600;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-right: 4px;
+    transition: background 0.2s;
+  }
+  .tab:last-child { margin-right: 0; }
+  .tab.active, .tab:hover {
+    background: #66b3ff;
+    color: white;
+  }
+
+  .main-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+  }
+
+  /* Ribbon label */
+  .ribbon {
+    position: relative;
+    background: #3399ff;
+    color: white;
+    padding: 6px 12px;
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .ribbon:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    border-width: 8px 0 8px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #3399ff;
+  }
+
+  h3 { color: #205493; margin-bottom: 0.5em; }
+  p { margin-bottom: 20px; }
+
+  /* Radio inputs */
+  input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: 14px; height: 14px;
+    border: 2px solid #3399ff;
+    margin: 0 8px;
+    transition: border-color 0.2s;
+  }
+  input[type="radio"]:checked {
+    background-color: #3399ff;
+  }
+
+  /* Buttons */
+  button,
+  #confirm_visit_button, #no_visit_button, #ok_button, #feedback_window h3,
+  #nextyButton, #backyButton, #final_result_button, #overlay_result_button,
+  #new_game_button, #cancel_button, #goBackButton,
+  #administration_button, #game_start, #answer_select_button,
+  .final_menu_button {
+    background: #D6342F;
+    border: 1px solid #3b78a8;
+    color: white;
+    text-transform: uppercase;
+    font-family: SharpUnityBold;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  button:hover {
+    background: linear-gradient(to bottom, #e34a45 0%, #b51d1d 100%) !important;
+    border: 1px solid #960000;
+  }
+
+  #open_custom_theme:hover, #achButton:hover, #mobileModeButton:hover, #cheat_menu_button:hover, #customThemesButton:hover, [onclick^="activateBenefitCheck()"]:hover, [onclick^="activateCheatMenu()"]: hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%) !important;
+    border: 1px solid #960000;
+  }
+
+
+  button:active {
+    background: #2e6a94;
+    transform: translateY(1px);
+  }
+
+  /* Rounded content cards with hover glow */
+  .card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s;
+  }
+  .card:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  }
+
+  /* Game window */
+  #game_window {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    height: auto;
+    padding: 16px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+    transition: transform 0.3s;
+  }
+  
+
+  #map_container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 16px;
+  }
+
+  @font-face {
+    font-family: "SharpUnityBold";
+    src: url("https://file.garden/Z0FdkcTkDnGVVCGf/SharpUnity-Extrabold%20(4).ttf") format("truetype");
+  }
+
+  /* Responsive tabs switch stacking */
+  @media (max-width: 600px) {
+    .tabs { flex-direction: column; }
+    .tab { margin-bottom: 4px; }
+  }
+
+  /* Simple fade-in animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards ease-out;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+    `;
+
+document.head.appendChild(morgan);
+
+campaignTrail_temp.modBoxTheme = {
+    "header_color": "#020073",
+    "header_text_color": "aliceblue",
+    "description_text_color": "aliceblue",
+    "description_background_color": "#610b0b",
+    "main_color": "#4e3a52",
+    "secondary_color": "#02003a",
+   "ui_text_color": "aliceblue"
+  }
+
+}
+//endcode
